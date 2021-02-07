@@ -1,0 +1,353 @@
+@import url('./reset.css');
+
+/* montserrat-regular - latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/montserrat-v15-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/montserrat-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/montserrat-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/montserrat-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/montserrat-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/montserrat-v15-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+  }
+  /* montserrat-italic - latin */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/montserrat-v15-latin-italic.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/montserrat-v15-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/montserrat-v15-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/montserrat-v15-latin-italic.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/montserrat-v15-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/montserrat-v15-latin-italic.svg#Montserrat') format('svg'); /* Legacy iOS */
+  }
+  /* montserrat-500 - latin */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/montserrat-v15-latin-500.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/montserrat-v15-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/montserrat-v15-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/montserrat-v15-latin-500.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/montserrat-v15-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/montserrat-v15-latin-500.svg#Montserrat') format('svg'); /* Legacy iOS */
+  }
+  /* montserrat-700 - latin */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/montserrat-v15-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/montserrat-v15-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/montserrat-v15-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/montserrat-v15-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/montserrat-v15-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/montserrat-v15-latin-700.svg#Montserrat') format('svg'); /* Legacy iOS */
+  }
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #444444;
+    line-height: 1.8;
+    text-rendering: optimizeLegibility;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1400px;
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em 2em;
+}
+
+.header__logo_img {
+    max-width: 130px;
+}
+
+/* Mobile menu style start */
+
+#header__input {
+    opacity: 0;
+}
+
+.header__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 31px;
+    right: 14px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.header__btn > span,
+.header__btn > span::before,
+.header__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+
+.header__btn > span::before {
+    content: '';
+    top: -8px;
+}
+
+.header__btn > span::after {
+    content: '';
+    top: 8px;
+}
+
+.header__list {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    overflow: scroll;
+}
+
+.header__mobile-logo {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 80px;
+    height: 120px;
+    right: 106px;
+    top: 70px;
+}
+
+.header__list_item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.header__list_item:hover,
+.header__list_item:active,
+.header__list_item:focus {
+    background-color: #b9b9b9;
+    border-radius: 6px;
+    transition: all 0.4s ease;
+}
+
+.header__list_item:hover > .header__link.list-link,
+.header__list_item:active > .header__link.list-link,
+.header__list_item:focus > .header__link.list-link {
+    color: #4b7024;
+}
+
+.header__link.list-link {
+    display: inherit;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+#header__input:checked ~ .header__btn > span {
+    transform: rotate(45deg);
+}
+
+#header__input:checked ~ .header__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#header__input:checked ~ .header__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#header__input:checked:checked ~ .header__list {
+    visibility: visible;
+    right: 0;
+    padding-top: 215px;
+}
+
+#header__input:checked:checked ~ .header__mobile-logo {
+    visibility: visible;
+}
+
+.header__btn > span,
+.header__btn > span::before,
+.header__btn > span::after {
+    transition-duration: .25s;
+}
+
+.header__list_item {
+    transition-duration: .25s;
+}
+
+.header__list_item {
+    transition-duration: .25s;
+}
+
+/* Mobile menu style end */
+
+.content {
+    flex: 1 1 auto;
+}
+
+@media (min-width: 320px) {
+
+    .header__logo_img {
+        max-width: 140px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .header__logo_img {
+        max-width: 170px;
+        margin-bottom: 1em;
+    }
+
+    #header__input,
+    .header__btn {
+        display: none;
+    }
+
+    .header__top-nav {
+        width: 100%;
+    }
+
+    .header__list {
+        width: 100%;
+        visibility: visible;
+        display: flex;
+        right: 0;
+        position: relative;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0 3em;
+        overflow: hidden;
+    }
+
+    .header__list_item {
+        display: flex;
+        font-size: 1.3rem;
+        font-weight: 500;
+        letter-spacing: 3px;
+        margin: 0 auto;
+    }
+
+    .header__mobile-logo {
+        display: none;
+    }
+
+    .header__list_item:hover,
+    .header__list_item:active,
+    .header__list_item:focus {
+        background-color: transparent;
+        transition: all 0.4s ease;
+    }
+
+    .header__link::after {
+        display: block;
+        position: absolute;
+        left: 0;
+        height: 1px;
+        background-color: #000;
+        content: "";
+        transition: width 0.4s ease-out;
+    }
+    
+    .header__link:hover::after,
+    .header__link:focus::after {
+        width: 100%;
+    }
+    
+    .header__link.list-link {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        color: #444444;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header__logo {
+        width: 210px;
+        flex-shrink: 0;
+        margin-right: 5em;
+    }
+
+    .header__top-nav {
+        flex-wrap: wrap;
+    }
+
+    .header__list_item {
+        align-items: center;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1400px) {
+
+}
+   
