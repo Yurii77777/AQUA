@@ -234,6 +234,148 @@ body {
     flex: 1 1 auto;
 }
 
+.content__slider {
+    display: block;
+    margin-bottom: 2em;
+}
+
+.content__slider_img {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.content__about {
+    margin: 0 2em 4em 2em;
+}
+
+.content__about_title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+    margin-bottom: 2em;
+}
+
+.content__about_title > span {
+    display: block;
+    height: 1px;
+    background-color: #000;
+    width: 20px;
+    margin: 0 auto;
+}
+
+.content__about_title-paragraphe {
+    font-weight: 500;
+}
+
+.content__about_paragraphe-wrapper {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: justify;
+    margin-bottom: 2em;
+}
+
+.content__about_top3-item {
+    margin-bottom: 2em;
+}
+
+.content__about_top3-item-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content__about_top3-item-link:hover,
+.content__about_top3-item-link:active,
+.content__about_top3-item-link:focus {
+    color: #4b7024;
+}
+
+.content__about_top3-item-img {
+    margin: 0 auto;
+}
+
+.content__about_top3-item-title {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1em 0;
+}
+
+.content__about_top3-item-paragraphe {
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.content__price {
+    background-color: #ABDCE1;
+    margin-bottom: 2em;
+}
+
+    /* Add new style for Bootstrap accordion start */
+
+.accordion {
+    padding: 1em;
+    font-family: inherit;
+    font-size: 1.2rem;
+}
+
+.accordion-item {
+    margin-bottom: 1.5em;
+}
+
+.accordion-item:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-item {
+    border: 1px solid #FFFFFF;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #fff;
+    color: #000;
+}
+
+.accordion-button:active,
+.accordion-button:focus {
+    background-color: #fff;
+    outline: 0;
+    color: #000;
+}
+
+.accordion-button {
+    font-family: inherit;
+    font-style: italic;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.accordion-collapse.collapse.show {
+    background-color: #c9e9ec;
+}
+
+.accordion-body__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 0.5px dashed white;
+    line-height: 2.5em;
+}
+
+.accordion-body__row_col2 {
+    margin: auto 0 auto 0.5em;
+}
+
+    /* Add new style for Bootstrap accordion end */
+
+.content__price_img-logo {
+    margin: auto;
+    padding: 1em;
+}
+
 @media (min-width: 320px) {
 
     .header__logo_img {
@@ -317,6 +459,34 @@ body {
         color: #444444;
     }
 
+    .content__about_paragraphe-wrapper {
+        width: 85%;
+        margin: 0 auto 2em auto;
+    }
+
+    .content__about_paragraphe {
+        font-size: 1.3rem;
+    }
+
+    .content__about_top3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .content__about_top3-item {
+        padding: 0 2em;
+        max-width: 350px;
+    }
+
+    .accordion-button {
+        font-size: 1.5rem;
+    }
+
+    .accordion-body__row {
+        font-size: 1.4rem;
+    }
+
 }
 
 @media (min-width: 992px) {
@@ -341,13 +511,37 @@ body {
         align-items: center;
     }
 
+    .content__about_paragraphe-wrapper {
+        width: 70%;
+    }
+
+    .accordion {
+        flex-grow: 1;
+        margin: auto;
+    }
+
+    .content__price {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .content__price_img {
+        margin: auto;
+    }
 }
 
 @media (min-width: 1200px) {
+
+    .content__about_paragraphe-wrapper {
+        width: 50%;
+    }
 
 }
 
 @media (min-width: 1400px) {
 
+    .content__about_paragraphe-wrapper {
+        width: 600px;
+    }
 }
-   
