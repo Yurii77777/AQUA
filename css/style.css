@@ -517,6 +517,141 @@ body {
     text-transform: uppercase;
 }
 
+.content__reservation_title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 2em;
+}
+
+.content__reservation_paragraph {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.content__reservation_form {
+    margin-top: 2em;
+}
+
+.content__reservation_form-row1,
+.content__reservation_form-row2 {
+    margin-bottom: 2em;
+}
+
+.content__reservation_form-name-lable,
+.content__reservation_form-email-lable,
+.content__reservation_form-select {
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #808080;
+}
+
+.content__reservation_form-name-lable,
+.content__reservation_form-email-lable {
+    position: relative;
+}
+
+.content__reservation_form-input,
+.content__reservation_form-select,
+#content__reservation_form-date,
+#content__reservation_form-procedures,
+.content__reservation_form-button {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    width: 100%;
+    height: 40px;
+    padding: 0 1em;
+}
+
+.content__reservation_form-input {
+    position: relative;
+    top: -12px;
+}
+
+#content__reservation_form-name:active + .content__reservation_form-name-lable,
+#content__reservation_form-name:focus + .content__reservation_form-name-lable,
+#content__reservation_form-email:focus + .content__reservation_form-email-lable,
+#content__reservation_form-email:active + .content__reservation_form-email-lable {
+    opacity: 0;
+}
+
+#content__reservation_form-name:focus,
+#content__reservation_form-name:active,
+#content__reservation_form-name:hover,
+#content__reservation_form-email:focus,
+#content__reservation_form-email:active,
+#content__reservation_form-email:hover,
+.content__reservation_form-select:focus,
+.content__reservation_form-select:active,
+.content__reservation_form-select:hover,
+#content__reservation_form-date:focus,
+#content__reservation_form-date:active,
+#content__reservation_form-date:hover,
+#content__reservation_form-procedures:focus,
+#content__reservation_form-procedures:active,
+#content__reservation_form-procedures:hover {
+    outline: 0.5px solid #4b7024;
+    border: 0.5px solid #4b7024;
+    cursor: pointer;
+}
+
+.content__reservation_form-email-lable {
+    z-index: 1;
+    top: 20px;
+    left: -45px;
+}
+
+.content__reservation_form-name-lable,
+.content__reservation_form-email-lable {
+    z-index: 1;
+    top: -44px;
+    left: 12px;
+}
+
+.content__reservation_form-select {
+    margin-top: -1em;
+}
+
+#content__reservation_form-date,
+#content__reservation_form-procedures {
+    margin-bottom: 1.3em;
+    color: #808080;
+}
+
+#content__reservation_form-procedures {
+    color: #808080;
+}
+
+.content__reservation_form-button {
+    border: none;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.content__reservation_form-button:hover,
+.content__reservation_form-button:focus,
+.content__reservation_form-button:active {
+    background-color: #84c340;
+}
+
+.content__reservation_paragraph-opentime {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 0 1em;
+    margin-bottom: 2em;
+}
+
 @media (min-width: 320px) {
 
     .header__logo_img {
@@ -643,6 +778,22 @@ body {
         "row1_item1 row1_item2"
         "row2_item1 row2_item2";
     }
+
+    .content__reservation_form-row1,
+    .content__reservation_form-row2 {
+        display: flex;
+        padding: 0 2em;
+    }
+
+    .content__reservation_form-name-lable,
+    .content__reservation_form-email-lable {
+        top: -6px;
+        left: -180px;
+    }
+
+    #content__reservation_form-procedures {
+        margin: 0 4em;
+    }
 }
 
 @media (min-width: 992px) {
@@ -719,6 +870,18 @@ body {
     .content__membership_link:hover img {
         position: relative;
         margin-top: -115px;
+    }
+
+    .content__reservation_form-row1,
+    .content__reservation_form-row2 {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content__reservation_form-name-lable,
+    .content__reservation_form-email-lable {
+        left: -200px;
     }
 }
 
