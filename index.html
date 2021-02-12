@@ -8,12 +8,10 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-            <!-- Main start 05.02.2021 40 min  -->
+            
     <div class="wrapper">
 
         <div class="container">
-
-            <!-- Header start 05.02.2021  -->
 
             <header class="header">
                 <div class="header__logo">
@@ -57,15 +55,44 @@
 
             </header>
 
-            <!-- Header end -->
-
             <article class="content">
 
-                <div class="content__slider">
+                <!-- Carousel from Bootstrap start -->
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="./img/slider/slide_1.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/slider/slide_2.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/slider/slide_3.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
+                <!-- <div class="content__slider">
                     <div class="content__slider slide">
                         <a href="#"><img src="./img/slider/slide_1.jpg" alt="First slide" class="content__slider_img"></a>
                     </div>
-                </div>
+                </div> -->
+
+                <!-- Carousel from Bootstrap end -->
 
                 <section class="content__about">
 
@@ -497,6 +524,93 @@
 
             <footer class="footer">
 
+                <div class="footer__container">
+
+                    <div class="footer__container_contacts">
+
+                        <ul class="footer__container_contacts list">
+                            <li class="footer__container_contacts list-item">
+                                Contacts
+                            </li>
+                            <li class="footer__container_contacts list-item">
+                                <a href="mailto:yuormail@mail.com" class="footer__container_contacts list-item link">yuormail@mail.com</a>
+                            </li>
+                            <li class="footer__container_contacts list-item">
+                                <a href="tel:+380950000000" class="footer__container_contacts list-item link">+38095-000-00-00</a>
+                            </li>
+                            <li class="footer__container_contacts list-item">
+                                <a href="tel:+380670000000" class="footer__container_contacts list-item link">+38067-000-00-00</a>
+                            </li>
+                            <li class="footer__container_contacts list-item">
+                                <a href="tel:skype" class="footer__container_contacts list-item link">skype</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="footer__container_address">
+
+                        <p class="footer__container_address title">
+                            Our address
+                        </p>
+
+                        <a href="https://goo.gl/maps/PGaPRbG6tVPjSoz2A" class="footer__container_address link" target="_blank" rel="noopener noreferrer">
+                            08131 Соф. Борщаговка, ул. Кошовая, 122
+                        </a>
+
+                    </div>
+
+                    <div class="footer__container_opentime">
+
+                        <p class="footer__container_opentime title">
+                            Opentime
+                        </p>
+
+                        <p class="footer__container_opentime paragraph">8:00am -11:30am</p>
+                        <p class="footer__container_opentime paragraph">2:00pm-5:30pm</p>
+                        <p class="footer__container_opentime paragraph">7:00pm-10:00pm</p>
+
+                    </div>
+
+                    <div class="footer__container_sign-up">
+
+                        <div class="footer__container_sign-up newsletter">
+
+                            <p class="footer__container_sign-up newsletter_title">
+                                Newsletter sign up
+                            </p>
+
+                            <form action="#" method="POST" class="footer__container_sign-up form">
+
+                                <input type="text" class="footer__container_sign-up form_input" name="footer__container_sign-up form_input">
+                                <label for="footer__container_sign-up form_input" class="footer__container_sign-up form_lable"><i class="fas fa-envelope-open-text"></i></label>
+
+                            </form>
+
+                        </div>
+
+                        <div class="footer__container_sign-up social">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-tiktok"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <span></span>
+
+                <p class="footer__copyright">
+                    © 2021 AQUA SPA AND BEAUTY. DEVELOPED BY JWSTHEMES TEAM.
+                </p>
+
+                <p class="footer__yurets_quote">
+                    "Контролируй финансовые дела и суды. Остальное не имеет значения. [Фрэнк Герберт. Дюна]" <br>
+                    Created by <a href="http://t.me/YuretsCodding" target="_blank" rel="noopener noreferrer">Yurets</a> in 2021 from JWSTHEMES TEAM design.
+                </p>
+
             </footer>
 
         </div>
@@ -505,6 +619,31 @@
 
     <!-- Add Bootstrap JS -->
     <script defer src="./js/bootstrap.js"></script>
+    
+    <!-- Add FontAwesome icons -->
+    <script defer src="https://kit.fontawesome.com/276bb7b159.js" crossorigin="anonymous"></script>
+    
+    <!-- Add top button -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+        $(window).scroll(function() {
+        if($(this).scrollTop() != 0) {
+        $('#topButton').fadeIn();
+        } else {
+        $('#topButton').fadeOut();
+        }
+        });
+        $('#topButton').click(function() {
+        $('body,html').animate({scrollTop:0},700);
+        });
+        });
+    </script>
+
+<div id="topButton">
+    <img src="./img/topButton.png" width="30px" height="30px" />
+</div>
 
 </body>
 </html>

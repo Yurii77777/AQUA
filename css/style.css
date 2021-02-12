@@ -102,13 +102,13 @@ body {
 .header__btn {
     display: flex;
     align-items: center;
-    position: fixed;
-    top: 31px;
-    right: 14px;
+    position: relative;
+    top: -10px;
+    right: -8px;
     width: 26px;
     height: 26px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 10;
 }
 
 .header__btn > span,
@@ -146,12 +146,17 @@ body {
     background-color: #ECEFF1;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
     overflow: scroll;
+    z-index: 9;
+}
+
+.carousel-indicators {
+    display: none;
 }
 
 .header__mobile-logo {
     visibility: hidden;
     position: absolute;
-    z-index: 1;
+    z-index: 9999;
     width: 80px;
     height: 120px;
     right: 106px;
@@ -234,16 +239,30 @@ body {
     flex: 1 1 auto;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+    border: none;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
 .content__slider {
     display: block;
     margin-bottom: 2em;
 }
 
-.content__slider_img {
+.d-block.w-100 {
     max-height: 500px;
     width: 100%;
     object-fit: cover;
     overflow: hidden;
+}
+
+.carousel.slide {
+    margin-bottom: 3em;
 }
 
 .content__about {
@@ -652,12 +671,118 @@ body {
     margin-bottom: 2em;
 }
 
+.footer {
+    background-color: #222;
+}
+
+.footer__container_contacts,
+.footer__container_address,
+.footer__container_opentime,
+.footer__container_sign-up {
+    margin-bottom: 1em;
+}
+
+.footer__container_contacts.list,
+.footer__container_address,
+.footer__container_opentime,
+.footer__container_sign-up {
+    text-align: center;
+    line-height: 3em;
+    letter-spacing: 1px;
+}
+
+.footer__container_contacts.list li:first-child,
+.footer__container_address.title,
+.footer__container_opentime.title,
+.footer__container_sign-up.newsletter_title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+}
+
+.footer__container_contacts.list li:nth-child(2),
+.footer__container_contacts.list li:nth-child(3),
+.footer__container_contacts.list li:nth-child(4),
+.footer__container_contacts.list li:nth-child(5),
+.footer__container_opentime.paragraph {
+    color: #aaa;
+    font-size: 1.3rem;
+}
+
+.footer__container_contacts.list-item.link,
+.footer__container_address.link {
+    text-decoration: none;
+    color: #aaa;
+}
+
+.footer__container_address.link {
+    font-size: 1.3rem;
+}
+
+.footer__container_sign-up.form_input {
+    width: 80%;
+}
+
+.footer__container_sign-up.form_input,
+.footer__container_sign-up.form_lable {
+    position: relative;
+}
+
+.footer__container_sign-up.form_lable {
+    right: 30px;
+    top: 3px;
+}
+
+.fas.fa-envelope-open-text {
+    font-size: 2rem;
+}
+
+.fab {
+    font-size: 2rem;
+    margin: 0 1em;
+}
+
+.footer > span {
+    display: block;
+    width: 100%;
+    height: 0.5px;
+    background-color: #fff;
+}
+
+.footer__copyright {
+    text-align: center;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    line-height: 3em;
+    color: #aaa;
+}
+
+.footer__yurets_quote {
+    text-align: center;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #aaa;
+    letter-spacing: 1px;
+    margin-bottom: 1em;
+}
+
+.footer__yurets_quote > a {
+    text-decoration: none;
+    color: #aaa;
+}
+
+#topButton {
+	position: fixed;
+	right: 45px;
+	bottom: 45px;
+   }
+
 @media (min-width: 320px) {
 
     .header__logo_img {
         max-width: 140px;
     }
-
 }
 
 @media (min-width: 768px) {
@@ -794,6 +919,13 @@ body {
     #content__reservation_form-procedures {
         margin: 0 4em;
     }
+
+    .footer__container {
+        display: grid;
+        grid-template-areas: 
+        "row1item1 row2item2"
+        "row2item1 row2item2";
+    }
 }
 
 @media (min-width: 992px) {
@@ -883,6 +1015,13 @@ body {
     .content__reservation_form-email-lable {
         left: -200px;
     }
+
+    .footer__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 2em;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -891,6 +1030,9 @@ body {
         width: 50%;
     }
 
+    .footer__container {
+        padding: 0 5em;
+    }
 }
 
 @media (min-width: 1400px) {
